@@ -2,12 +2,15 @@ import { ArtDecoSunburst } from "@/components/ArtDecoSunburst";
 import { ArtDecoDivider } from "@/components/ArtDecoDivider";
 import { ServiceCard } from "@/components/ServiceCard";
 import { CTAForm } from "@/components/CTAForm";
+import { Navigation } from "@/components/Navigation";
 
 function App() {
   return (
     <main className="min-h-screen bg-background dark">
+      <Navigation />
+      
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
+      <section id="главная" className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
         <ArtDecoSunburst />
 
         <div className="relative z-10 text-center max-w-4xl mx-auto">
@@ -77,8 +80,8 @@ function App() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-24 px-6 bg-card/50">
+      {/* Catalog Section */}
+      <section id="каталог" className="py-24 px-6 bg-card/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-primary tracking-[0.2em] uppercase text-sm mb-4">Наши коллекции</p>
@@ -144,8 +147,8 @@ function App() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 px-6 relative overflow-hidden">
+      {/* Order Section */}
+      <section id="заказать" className="py-24 px-6 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <ArtDecoSunburst />
         </div>
@@ -169,6 +172,48 @@ function App() {
 
             <CTAForm />
           </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="о-нас" className="py-24 px-6 bg-card/30">
+        <div className="max-w-4xl mx-auto text-center">
+          <ArtDecoDivider variant="stepped" />
+          <p className="text-primary tracking-[0.2em] uppercase text-sm mb-4">О нас</p>
+          <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-8">Эксперты премиальных тканей</h2>
+          <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
+            <p>
+              Золотая Нить — ведущий поставщик эксклюзивных тканей VIP-класса для профессионалов индустрии. Мы работаем напрямую с европейскими и азиатскими мануфактурами, гарантируя подлинность и высочайшее качество каждого метра ткани.
+            </p>
+            <p>
+              Наши клиенты — дизайнеры интерьеров премиум-сегмента и производители элитной мебели, для которых компромиссы в качестве материалов неприемлемы. Мы предлагаем индивидуальный подход, оперативную доставку образцов и гибкие условия сотрудничества для B2B-партнёров.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Cart Section */}
+      <section id="корзина" className="py-24 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="flex justify-center mb-8">
+            <div className="w-20 h-20 border-2 border-primary rounded-full flex items-center justify-center">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-10 h-10 text-primary">
+                <circle cx="9" cy="21" r="1" />
+                <circle cx="20" cy="21" r="1" />
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+              </svg>
+            </div>
+          </div>
+          <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-4">Ваша корзина пуста</h2>
+          <p className="text-muted-foreground text-lg mb-8">
+            Запросите каталог с образцами и ценами, чтобы начать формировать заказ для вашего проекта.
+          </p>
+          <button 
+            onClick={() => document.getElementById('заказать')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium tracking-wider uppercase text-sm px-8 py-3 transition-all duration-300"
+          >
+            Запросить каталог
+          </button>
         </div>
       </section>
 
