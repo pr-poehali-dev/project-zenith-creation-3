@@ -24,7 +24,7 @@ const velvetFabrics: FabricItem[] = [
     weight: "450 г/м²",
     color: "Изумрудный",
     price: "По запросу",
-    image: "bg-emerald-900"
+    image: "https://cdn.poehali.dev/projects/02bd4f74-6ad3-48cc-9caa-de7007d68fed/files/282688e7-b666-4155-800c-b58068649780.jpg"
   },
   {
     id: "v2",
@@ -35,7 +35,7 @@ const velvetFabrics: FabricItem[] = [
     weight: "520 г/м²",
     color: "Сапфировый",
     price: "По запросу",
-    image: "bg-blue-900"
+    image: "https://cdn.poehali.dev/projects/02bd4f74-6ad3-48cc-9caa-de7007d68fed/files/8239e753-d9bf-48ea-ad23-4a6fcf1e3785.jpg"
   },
   {
     id: "v3",
@@ -46,7 +46,7 @@ const velvetFabrics: FabricItem[] = [
     weight: "480 г/м²",
     color: "Бордовый",
     price: "По запросу",
-    image: "bg-red-900"
+    image: "https://cdn.poehali.dev/projects/02bd4f74-6ad3-48cc-9caa-de7007d68fed/files/5c671cb0-251c-4515-ac89-692337c55eec.jpg"
   },
   {
     id: "v4",
@@ -57,7 +57,7 @@ const velvetFabrics: FabricItem[] = [
     weight: "400 г/м²",
     color: "Золотисто-коричневый",
     price: "По запросу",
-    image: "bg-amber-900"
+    image: "https://cdn.poehali.dev/projects/02bd4f74-6ad3-48cc-9caa-de7007d68fed/files/c3eaffa6-e9ff-4e4a-acb5-14d46b69ed6d.jpg"
   },
   {
     id: "v5",
@@ -68,7 +68,7 @@ const velvetFabrics: FabricItem[] = [
     weight: "470 г/м²",
     color: "Темно-серый",
     price: "По запросу",
-    image: "bg-slate-800"
+    image: "https://cdn.poehali.dev/projects/02bd4f74-6ad3-48cc-9caa-de7007d68fed/files/b161c59f-2e7f-4df4-8849-76ead0d4b2c2.jpg"
   },
   {
     id: "v6",
@@ -79,7 +79,7 @@ const velvetFabrics: FabricItem[] = [
     weight: "440 г/м²",
     color: "Морская волна",
     price: "По запросу",
-    image: "bg-teal-900"
+    image: "https://cdn.poehali.dev/projects/02bd4f74-6ad3-48cc-9caa-de7007d68fed/files/c33f0c8e-eb33-4696-a703-729abb47ff56.jpg"
   }
 ];
 
@@ -133,18 +133,23 @@ export function VelvetCatalog({ onBack }: VelvetCatalogProps) {
             {velvetFabrics.map((fabric) => (
               <div
                 key={fabric.id}
-                className="group relative bg-card border border-border hover:border-primary transition-all duration-500"
+                className="group relative bg-card border border-border hover:border-primary hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-pointer"
               >
                 {/* Corner decorations */}
-                <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-primary opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-primary opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-primary opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75" />
+                <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-150" />
+                <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200" />
 
-                {/* Image placeholder */}
-                <div className={`h-64 ${fabric.image} relative overflow-hidden`}>
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4">
+                {/* Image */}
+                <div className="h-64 relative overflow-hidden">
+                  <img 
+                    src={fabric.image} 
+                    alt={fabric.name}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/50 to-transparent group-hover:from-background/80 transition-colors duration-500" />
+                  <div className="absolute bottom-4 left-4 right-4 transform transition-transform duration-500 group-hover:translate-y-[-8px]">
                     <h3 className="font-serif text-2xl text-foreground mb-1">{fabric.name}</h3>
                     <p className="text-primary text-sm">{fabric.origin}</p>
                   </div>
