@@ -5,12 +5,22 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { CTAForm } from "@/components/CTAForm";
 import { Navigation } from "@/components/Navigation";
 import { VelvetCatalog } from "@/pages/VelvetCatalog";
+import { JacquardCatalog } from "@/pages/JacquardCatalog";
+import { LeatherCatalog } from "@/pages/LeatherCatalog";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<"home" | "velvet">("home");
+  const [currentPage, setCurrentPage] = useState<"home" | "velvet" | "jacquard" | "leather">("home");
 
   if (currentPage === "velvet") {
     return <VelvetCatalog onBack={() => setCurrentPage("home")} />;
+  }
+
+  if (currentPage === "jacquard") {
+    return <JacquardCatalog onBack={() => setCurrentPage("home")} />;
+  }
+
+  if (currentPage === "leather") {
+    return <LeatherCatalog onBack={() => setCurrentPage("home")} />;
   }
 
   return (
@@ -117,6 +127,7 @@ function App() {
                   <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
                 </svg>
               }
+              onClick={() => setCurrentPage("jacquard")}
             />
             <ServiceCard
               title="Натуральная кожа"
@@ -127,6 +138,7 @@ function App() {
                   <circle cx="7" cy="7" r="1" />
                 </svg>
               }
+              onClick={() => setCurrentPage("leather")}
             />
           </div>
         </div>
