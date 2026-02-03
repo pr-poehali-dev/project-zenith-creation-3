@@ -20,14 +20,14 @@ function App() {
             </div>
           </div>
 
-          <p className="text-primary tracking-[0.3em] uppercase text-sm mb-6">С 2024 года</p>
+          <p className="text-primary tracking-[0.3em] uppercase text-sm mb-6">Премиальные ткани</p>
 
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-tight">
-            <span className="text-gold-gradient">Золотой</span>Капитал
+            <span className="text-gold-gradient">Золотая</span>Нить
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-12">
-            Эксклюзивный клуб для взыскательных инвесторов, открывающий доступ к уникальным возможностям в альтернативных активах.
+            Эксклюзивные ткани VIP-класса для дизайнеров интерьеров и производителей премиальной мебели. Качество, достойное ваших проектов.
           </p>
 
           {/* Decorative bottom element */}
@@ -62,15 +62,15 @@ function App() {
             <div>
               <p className="text-primary tracking-[0.2em] uppercase text-sm mb-4">Наша философия</p>
               <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-6 leading-tight text-balance">
-                Где видение встречает возможности
+                Где мастерство встречает роскошь
               </h2>
             </div>
             <div className="space-y-6">
               <p className="text-muted-foreground leading-relaxed text-lg">
-                В мире обычных инвестиций мы ищем исключительное. ЗолотойКапитал объединяет избранный круг дальновидных инвесторов, которые понимают, что истинное богатство строится через доступ к возможностям, недоступным массовому рынку.
+                В мире массового производства мы создаём исключительное. Золотая Нить поставляет премиальные ткани для избранного круга дизайнеров и производителей, которые понимают, что настоящая роскошь начинается с качества материалов.
               </p>
               <p className="text-muted-foreground leading-relaxed text-lg">
-                От музейного изобразительного искусства до винтажных автомобилей высшего класса, от редких коллекционных предметов до новых альтернативных активов — мы отбираем, проверяем и представляем только исключительное.
+                От итальянского бархата до швейцарского жаккарда, от японского шёлка до эксклюзивных коллекционных тканей — мы отбираем, проверяем и поставляем только лучшее для ваших премиальных проектов.
               </p>
             </div>
           </div>
@@ -81,40 +81,38 @@ function App() {
       <section className="py-24 px-6 bg-card/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <p className="text-primary tracking-[0.2em] uppercase text-sm mb-4">Наши направления</p>
-            <h2 className="font-serif text-4xl md:text-5xl text-foreground text-balance">Кураторское совершенство</h2>
+            <p className="text-primary tracking-[0.2em] uppercase text-sm mb-4">Наши коллекции</p>
+            <h2 className="font-serif text-4xl md:text-5xl text-foreground text-balance">Премиальные материалы</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <ServiceCard
-              title="Изобразительное искусство"
-              description="Доступ к работам музейного качества от признанных мастеров и современных визионеров, отобранных экспертами мирового уровня."
+              title="Премиальный бархат"
+              description="Итальянский и французский бархат высочайшего качества для элитной мебели и интерьеров. Глубина цвета и тактильная роскошь."
               icon={
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-12 h-12">
                   <rect x="3" y="3" width="18" height="18" rx="2" />
-                  <circle cx="8.5" cy="8.5" r="1.5" />
-                  <path d="M21 15l-5-5L5 21" />
+                  <path d="M3 9h18M3 15h18" />
                 </svg>
               }
             />
             <ServiceCard
-              title="Редкие коллекции"
-              description="От винтажных часов до исторических реликвий — каждый предмет с подтвержденной подлинностью и провенансом высочайшего стандарта."
+              title="Дизайнерский жаккард"
+              description="Эксклюзивные жаккардовые ткани от ведущих европейских мануфактур. Сложные паттерны, безупречное исполнение, долговечность."
               icon={
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-12 h-12">
-                  <circle cx="12" cy="12" r="9" />
-                  <path d="M12 6v6l4 2" />
+                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                  <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
                 </svg>
               }
             />
             <ServiceCard
-              title="Классические автомобили"
-              description="Исключительные автомобили исторической значимости, каждый из которых представляет вершину автомобильного искусства и инженерии."
+              title="Натуральная кожа"
+              description="Премиальная кожа из Италии и Испании для мебельного производства. Только full-grain качество с естественной текстурой."
               icon={
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-12 h-12">
-                  <path d="M5 17h14M6 9l2-4h8l2 4M4 14h16v3H4z" />
-                  <circle cx="7" cy="17" r="2" />
-                  <circle cx="17" cy="17" r="2" />
+                  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+                  <circle cx="7" cy="7" r="1" />
                 </svg>
               }
             />
@@ -135,10 +133,10 @@ function App() {
 
             <blockquote className="relative z-10">
               <p className="font-serif text-2xl md:text-3xl text-foreground leading-relaxed italic mb-8">
-                Членство в ЗолотойКапитал изменило мой подход к альтернативным инвестициям. Качество возможностей и уровень сервиса просто несравнимы.
+                Работа с Золотой Нитью вывела наши проекты на новый уровень. Качество тканей и профессиональный подход к B2B-клиентам — именно то, что нужно для премиальных интерьеров.
               </p>
               <footer className="text-muted-foreground">
-                <span className="text-primary">—</span> Уважаемый член клуба,{" "}
+                <span className="text-primary">—</span> Дизайнер интерьеров,{" "}
                 <span className="text-primary">Москва</span>
               </footer>
             </blockquote>
@@ -155,10 +153,10 @@ function App() {
         <div className="max-w-3xl mx-auto relative z-10">
           <div className="text-center mb-12">
             <ArtDecoDivider variant="chevron" />
-            <p className="text-primary tracking-[0.2em] uppercase text-sm mb-4">Начните свой путь</p>
-            <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-6 text-balance">Запросить приглашение</h2>
+            <p className="text-primary tracking-[0.2em] uppercase text-sm mb-4">Начните сотрудничество</p>
+            <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-6 text-balance">Запросить каталог</h2>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-              Членство предоставляется только по приглашению. Оставьте заявку, и наш представитель свяжется с вами для обсуждения возможного сотрудничества.
+              Работаем только с профессионалами — дизайнерами интерьеров и производителями мебели. Оставьте заявку, и наш менеджер отправит вам эксклюзивный каталог с образцами и ценами.
             </p>
           </div>
 
@@ -180,7 +178,7 @@ function App() {
           <div className="flex flex-col items-center gap-6">
             <div className="flex items-center gap-4">
               <div className="w-12 h-px bg-primary" />
-              <span className="font-serif text-xl text-foreground">ЗолотойКапитал</span>
+              <span className="font-serif text-xl text-foreground">Золотая Нить</span>
               <div className="w-12 h-px bg-primary" />
             </div>
 
