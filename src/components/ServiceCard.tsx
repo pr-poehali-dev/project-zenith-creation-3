@@ -4,11 +4,15 @@ interface ServiceCardProps {
   title: string;
   description: string;
   icon: ReactNode;
+  onClick?: () => void;
 }
 
-export function ServiceCard({ title, description, icon }: ServiceCardProps) {
+export function ServiceCard({ title, description, icon, onClick }: ServiceCardProps) {
   return (
-    <div className="group relative p-8 bg-card border border-border hover:border-primary transition-all duration-500">
+    <div 
+      onClick={onClick}
+      className={`group relative p-8 bg-card border border-border hover:border-primary transition-all duration-500 ${onClick ? 'cursor-pointer' : ''}`}
+    >
       {/* Corner decorations */}
       <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-primary" />
       <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-primary" />

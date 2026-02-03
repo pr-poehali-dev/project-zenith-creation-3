@@ -1,10 +1,18 @@
+import { useState } from "react";
 import { ArtDecoSunburst } from "@/components/ArtDecoSunburst";
 import { ArtDecoDivider } from "@/components/ArtDecoDivider";
 import { ServiceCard } from "@/components/ServiceCard";
 import { CTAForm } from "@/components/CTAForm";
 import { Navigation } from "@/components/Navigation";
+import { VelvetCatalog } from "@/pages/VelvetCatalog";
 
 function App() {
+  const [currentPage, setCurrentPage] = useState<"home" | "velvet">("home");
+
+  if (currentPage === "velvet") {
+    return <VelvetCatalog onBack={() => setCurrentPage("home")} />;
+  }
+
   return (
     <main className="min-h-screen bg-background dark">
       <Navigation />
@@ -98,6 +106,7 @@ function App() {
                   <path d="M3 9h18M3 15h18" />
                 </svg>
               }
+              onClick={() => setCurrentPage("velvet")}
             />
             <ServiceCard
               title="Дизайнерский жаккард"
